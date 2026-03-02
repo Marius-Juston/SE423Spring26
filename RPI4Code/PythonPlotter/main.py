@@ -83,6 +83,8 @@ def fetch_and_update(frame, socket_client, ax, input_text_boxes, figDraw, lineOb
                         
                         x = int(x)
                         y = int(y)
+
+                        angle = floats[2]
                         
                         x_min = x - SIZE_OF_RECT
                         y_min = y - SIZE_OF_RECT
@@ -91,7 +93,7 @@ def fetch_and_update(frame, socket_client, ax, input_text_boxes, figDraw, lineOb
                         height = SIZE_OF_RECT * 2
                         
                         rect = patches.Rectangle(
-                            (x_min, y_min), width, height,
+                            (x_min, y_min), width, height, angle=np.rad2deg(angle),
                             linewidth=1, edgecolor='black', facecolor='cyan', alpha=0.6
                         )
                         
@@ -138,14 +140,13 @@ def transmit( socket_client, text, event):
         except ValueError:
             data.append(0.0)
             tb.set_val('0.0')
+
+    text = " ".join(f"{d:.6f}" for d in data)
     
-    start = '' #chr(0xFD)
-    end = '' #chr(0xFF)
-    
-    msg = f'{start}{" ".join(f"{d:.6f}" for d in data)}{end}'
+    msg = b"\xFD" + text.encode("ascii") + b"\xFF"
     
     print("Transmitting: {}".format(msg))
-    socket_client.sendall(msg.encode('ascii'))
+    socket_client.sendall(msg)
     
 def parse_args():
     import argparse
