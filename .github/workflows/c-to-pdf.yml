@@ -11,9 +11,14 @@ jobs:
   build-pdfs:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # Fetch all history for all branches and tags
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -34,9 +39,21 @@ jobs:
           TARGET_FOLDER: "workspace" 
         run: .github/scripts/generate_pdfs.sh
 
-      - name: Upload PDFs as Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: highlighted-c-pdfs
-          path: output_pdfs/
-          retention-days: 7
+      - name: Commit and Push PDFs
+        run: |
+          # 1. Configure git as the official GitHub Actions bot
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 2. Stage the generated PDFs
+          git add output_pdfs/
+          
+          # 3. Commit and push ONLY if there are actual changes
+          # This prevents the workflow from failing if you just updated a README
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: auto-generate syntax highlighted PDFs"
+            git push
+            echo "Successfully pushed new PDFs to the repository."
+          else
+            echo "No PDF changes detected. Skipping commit."
+          fi
