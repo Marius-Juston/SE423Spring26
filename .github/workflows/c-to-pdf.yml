@@ -2,13 +2,13 @@ name: Generate PDFs from C Files
 
 on:
   push:
-    branches: [ "main" ]
     paths:
-      - '**/*.c'
+        - 'workspace/**/*.c'
+        - '.github/workflows/c-to-pdf.yml'
   pull_request:
-    branches: [ "main" ]
     paths:
-      - '**/*.c'
+      - 'workspace/**/*.c'
+      - '.github/workflows/c-to-pdf.yml'
   workflow_dispatch: # Allows you to trigger the action manually from the Actions tab
 
 jobs:
@@ -21,8 +21,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
-        with:
-          fetch-depth: 0 # Fetch all history for all branches and tags
 
       - name: Set up Python
         uses: actions/setup-python@v6
