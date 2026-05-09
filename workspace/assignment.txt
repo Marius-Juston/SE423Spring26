@@ -19,3 +19,5 @@
 # subset of assignments whose folders changed; results land in autograder/.
 #
 # Add lines below as you start each assignment:
+HW1 HW1mj
+HW2 HW2mj
