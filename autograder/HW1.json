@@ -1,0 +1,98 @@
+{
+  "assignment": "HW1",
+  "checks": [
+    {
+      "messages": [
+        "[2026-05-09 05:11:55.584] [info] Check initialization\n"
+      ],
+      "name": "check_initialization",
+      "status": "pass"
+    },
+    {
+      "messages": [
+        "[2026-05-09 05:11:55.600] [info] Check timer 0\n",
+        "[2026-05-09 05:11:55.600] [warning] Timer0 GPIO34 toggle GPIO B Data Toggle Register (GPIO32 to 63) all expected to be 4 but was 0\n",
+        "[2026-05-09 05:11:55.600] [warning] Timer0 GPIO34 toggle GPIO B Data Toggle Register (GPIO32 to 63) bit 2 Output Toggle bit for this pin expected to be 1 but was 0\n"
+      ],
+      "name": "check_timer0",
+      "status": "fail"
+    },
+    {
+      "messages": [
+        "[2026-05-09 05:11:55.600] [info] Check timer 1\n"
+      ],
+      "name": "check_timer1",
+      "status": "pass"
+    },
+    {
+      "messages": [
+        "[2026-05-09 05:11:55.600] [info] Check timer 2 (spec-strict)\n",
+        "[2026-05-09 05:11:55.600] [error] [check_timer2] PB1-pressed: GPIO61 (LED12) toggle bit not set\n",
+        "[2026-05-09 05:11:55.600] [error]   spec: spec Ex.9: 'If PB1 (GPIO4) pressed (DAT==0), toggle LED12 (GPIO61)'\n",
+        "[2026-05-09 05:11:55.600] [error] [check_timer2] PB1-pressed: GPIO157 (LED13) toggle bit not set\n",
+        "[2026-05-09 05:11:55.600] [error]   spec: spec Ex.9: '...toggle LED13 (GPIO157)'\n",
+        "[2026-05-09 05:11:55.600] [error] [check_timer2] PB4-pressed: GPIO158 (LED14) toggle bit not set\n",
+        "[2026-05-09 05:11:55.600] [error]   spec: spec Ex.9: 'If PB4 (GPIO7) pressed, toggle LED14 (GPIO158)'\n",
+        "[2026-05-09 05:11:55.600] [error] [check_timer2] PB4-pressed: GPIO159 (LED15) toggle bit not set\n",
+        "[2026-05-09 05:11:55.600] [error]   spec: spec Ex.9: '...toggle LED15 (GPIO159)'\n"
+      ],
+      "name": "check_timer2",
+      "status": "fail"
+    },
+    {
+      "messages": [
+        "[2026-05-09 05:11:55.600] [info] Check saturate\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(0, 0.25) = 0 got -0.25\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-0.5, 1) = -0.5 got -1\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(0, 1) = 0 got -1\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(0.5, 1) = 0.5 got -1\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-1, 1.5) = -1 got -1.5\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-0.5, 1.5) = -0.5 got -1.5\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(0, 1.5) = 0 got -1.5\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(0.5, 1.5) = 0.5 got -1.5\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-1, 1.5) = -1 got -1.5\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-1, 2) = -1 got -2\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-0.5, 2) = -0.5 got -2\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(0, 2) = 0 got -2\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(0.5, 2) = 0.5 got -2\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-1, 2) = -1 got -2\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-10, 15) = -10 got -15\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-2, 15) = -2 got -15\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-1, 15) = -1 got -15\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-0.5, 15) = -0.5 got -15\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(0, 15) = 0 got -15\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(0.5, 15) = 0.5 got -15\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-1, 15) = -1 got -15\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-2, 15) = -2 got -15\n",
+        "[2026-05-09 05:11:55.600] [error] Expecting saturate(-10, 15) = -10 got -15\n"
+      ],
+      "name": "check_saturate",
+      "status": "fail"
+    },
+    {
+      "messages": [
+        "[2026-05-09 05:11:55.600] [info] Check print cadence\n",
+        "[2026-05-09 05:11:55.731] [error] [check_print_cadence] expected ~4 prints on SCIA (tolerance \u00b125% \u2192 window [3, 5]), got 0\n",
+        "[2026-05-09 05:11:55.731] [error]   hint: zero printf calls were captured. Common causes:\n",
+        "[2026-05-09 05:11:55.731] [error]         - the SCI driver wasn't initialised (init_serialSCIA / serial_printf gated)\n",
+        "[2026-05-09 05:11:55.731] [error]         - UARTPrint == 1 is never set inside cpu_timer2_isr\n",
+        "[2026-05-09 05:11:55.731] [error]         - the print is gated by 'if (CpuTimer2.InterruptCount % N == 0)' but InterruptCount never reaches a multiple of N during the test window\n",
+        "[2026-05-09 05:11:55.731] [error]   spec Ex.5: serial_printf must fire every 250 ms \u2014 that's 4 prints in 1 s\n"
+      ],
+      "name": "check_print_cadence",
+      "status": "fail"
+    },
+    {
+      "messages": [
+        "[2026-05-09 05:11:55.731] [info] Check print format\n",
+        "[2026-05-09 05:11:55.781] [error] [check_print_format] no SCIA prints captured \u2014 main thread may not be servicing UARTPrint\n"
+      ],
+      "name": "check_print_format",
+      "status": "fail"
+    }
+  ],
+  "commit": "4e3fb5d08c238f982abbb3d029f0221ac4739ed4",
+  "failed": 5,
+  "passed": 2,
+  "timestamp": "2026-05-09T05:12:08Z"
+}
