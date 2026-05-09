@@ -914,6 +914,8 @@ __interrupt void SWI1_HighestPriority(void)     // EMIF_ERROR
         }
 		
         if (NewCAMDataAprilTag1 == 1) {
+			// Good Place to Print April Tags
+			// https://tools.limelightvision.io/apriltag-generator
             NewCAMDataAprilTag1 = 0;
             tagx = fromCAMvaluesAprilTag1[0];
             tagy = fromCAMvaluesAprilTag1[1];

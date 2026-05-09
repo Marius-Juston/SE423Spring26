@@ -124,6 +124,8 @@ while True:
         uart.write(b)
         b = ustruct.pack(blob_packet, 0.0, 0.0, 0.0)
         uart.write(b)
+
+# print April Tags at https://tools.limelightvision.io/apriltag-generator    
     tagfound = 0
     runtag = 0 #set this to 1 if you want to look for april tags
     if runtag == 1:
