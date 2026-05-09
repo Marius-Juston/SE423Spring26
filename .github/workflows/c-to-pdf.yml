@@ -25,7 +25,8 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: | # Don't need to do sudo apt-get update since the base image is already updated
+        run: |
+          sudo apt-get update
           sudo apt-get install -y wkhtmltopdf
           pip install Pygments
 
