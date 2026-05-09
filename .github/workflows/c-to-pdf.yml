@@ -2,9 +2,13 @@ name: Generate PDFs from C Files
 
 on:
   push:
-    branches: [ "main" ]
+    paths:
+        - 'workspace/**/*.c'
+        - '.github/workflows/c-to-pdf.yml'
   pull_request:
-    branches: [ "main" ]
+    paths:
+      - 'workspace/**/*.c'
+      - '.github/workflows/c-to-pdf.yml'
   workflow_dispatch: # Allows you to trigger the action manually from the Actions tab
 
 jobs:
