@@ -21,7 +21,7 @@ concurrency:
 
 jobs:
   grade:
-    uses: Marius-Juston/AutomaticGrader/.github/workflows/grade.reusable.yml@master 
+    uses: Marius-Juston/AutomaticGrader/.github/workflows/grade.reusable.yml@master
     with:
       manifest: workspace/assignment.txt
       workspace: workspace
