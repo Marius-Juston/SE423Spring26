@@ -5,6 +5,8 @@ on:
     paths:
       - 'workspace/**'
       - '.github/workflows/grade.yml'
+    paths-ignore:
+      - 'autograder/**'
   workflow_dispatch:
     inputs:
       grade-all:
