@@ -21,3 +21,4 @@
 # Add lines below as you start each assignment:
 HW1 HW1mj
 HW2 HW2mj
+HW1 HW2mj_copy
