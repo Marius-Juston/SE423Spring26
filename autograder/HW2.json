@@ -3,46 +3,46 @@
   "checks": [
     {
       "messages": [
-        "[2026-05-09 06:00:15.235] [info] [HW2] check_initialization\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] EPwm4Regs.TBPRD not ~50000 (expected 50 MHz / 1 kHz)\n",
-        "[2026-05-09 06:00:15.248] [error]   spec: TBPRD = 50000 yields 50 MHz / 50000 = 1 kHz\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] EPwm4Regs.ETSEL.SOCAEN != 1 (must enable SOCA trigger)\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] EPwm4Regs.ETSEL.SOCASEL != 2 (must trigger on counter == TBPRD)\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] EPwm4Regs.ETPS.SOCAPRD != 1 (trigger every 1st event)\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] AdcaRegs.ADCSOC0CTL.CHSEL != 4 (ADCINA4 = photodiode)\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] AdcaRegs.ADCSOC1CTL.CHSEL != 2 (ADCINA2 = joystick X)\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] AdcaRegs.ADCSOC2CTL.CHSEL != 3 (ADCINA3 = joystick Y)\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] AdcaRegs.ADCSOC0CTL.TRIGSEL != 0x0B (EPWM4 ADCSOCA)\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] ADCINTSEL1N2.INT1SEL != 2 (interrupt on last SOC)\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] ADCINTSEL1N2.INT1E != 1 (must enable ADCA1 interrupt)\n",
-        "[2026-05-09 06:00:15.248] [error] [HW2/init] AdcaRegs.ADCCTL1.ADCPWDNZ != 1 (ADCA must be powered up)\n",
-        "[2026-05-09 06:00:15.248] [warning] PieCtrlRegs Interrupt Group 1 Enable Register all expected to be 65 but was 64\n",
-        "[2026-05-09 06:00:15.248] [warning] PieCtrlRegs Interrupt Group 1 Enable Register bit 0 Enable for Interrupt 1.1 expected to be 1 but was 0\n",
-        "[2026-05-09 06:00:15.249] [warning] CpuTimer2 PeriodInUSec expected to be 1000 but was 40000\n"
+        "[2026-05-09 07:56:22.506] [info] [HW2] check_initialization\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] EPwm4Regs.TBPRD not ~50000 (expected 50 MHz / 1 kHz)\n",
+        "[2026-05-09 07:56:22.508] [error]   spec: TBPRD = 50000 yields 50 MHz / 50000 = 1 kHz\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] EPwm4Regs.ETSEL.SOCAEN != 1 (must enable SOCA trigger)\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] EPwm4Regs.ETSEL.SOCASEL != 2 (must trigger on counter == TBPRD)\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] EPwm4Regs.ETPS.SOCAPRD != 1 (trigger every 1st event)\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] AdcaRegs.ADCSOC0CTL.CHSEL != 4 (ADCINA4 = photodiode)\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] AdcaRegs.ADCSOC1CTL.CHSEL != 2 (ADCINA2 = joystick X)\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] AdcaRegs.ADCSOC2CTL.CHSEL != 3 (ADCINA3 = joystick Y)\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] AdcaRegs.ADCSOC0CTL.TRIGSEL != 0x0B (EPWM4 ADCSOCA)\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] ADCINTSEL1N2.INT1SEL != 2 (interrupt on last SOC)\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] ADCINTSEL1N2.INT1E != 1 (must enable ADCA1 interrupt)\n",
+        "[2026-05-09 07:56:22.508] [error] [HW2/init] AdcaRegs.ADCCTL1.ADCPWDNZ != 1 (ADCA must be powered up)\n",
+        "[2026-05-09 07:56:22.509] [warning] PieCtrlRegs Interrupt Group 1 Enable Register all expected to be 65 but was 64\n",
+        "[2026-05-09 07:56:22.509] [warning] PieCtrlRegs Interrupt Group 1 Enable Register bit 0 Enable for Interrupt 1.1 expected to be 1 but was 0\n",
+        "[2026-05-09 07:56:22.510] [warning] CpuTimer2 PeriodInUSec expected to be 1000 but was 40000\n"
       ],
       "name": "check_initialization",
       "status": "fail"
     },
     {
       "messages": [
-        "[2026-05-09 06:00:15.250] [info] [HW2] check_adc_isr_scaling\n",
-        "[2026-05-09 06:00:15.250] [error] [HW2/adc_scaling] missing student symbols (ADCA_ISR, Adca4result, JoystickX/Yresult, Adca4voltage, JoystickX/Yvoltage)\n"
+        "[2026-05-09 07:56:22.510] [info] [HW2] check_adc_isr_scaling\n",
+        "[2026-05-09 07:56:22.510] [error] [HW2/adc_scaling] missing student symbols (ADCA_ISR, Adca4result, JoystickX/Yresult, Adca4voltage, JoystickX/Yvoltage)\n"
       ],
       "name": "check_adc_isr_scaling",
       "status": "fail"
     },
     {
       "messages": [
-        "[2026-05-09 06:00:15.250] [info] [HW2] check_print_cadence\n",
-        "[2026-05-09 06:00:15.250] [error] [HW2/print_cadence] ADCA_ISR not defined by student\n"
+        "[2026-05-09 07:56:22.511] [info] [HW2] check_print_cadence\n",
+        "[2026-05-09 07:56:22.511] [error] [HW2/print_cadence] ADCA_ISR not defined by student\n"
       ],
       "name": "check_print_cadence",
       "status": "fail"
     },
     {
       "messages": [
-        "[2026-05-09 06:00:15.250] [info] [HW2] check_print_format\n",
-        "[2026-05-09 06:00:15.250] [error] [HW2/print_format] ADCA_ISR not defined by student\n"
+        "[2026-05-09 07:56:22.511] [info] [HW2] check_print_format\n",
+        "[2026-05-09 07:56:22.511] [error] [HW2/print_format] ADCA_ISR not defined by student\n"
       ],
       "name": "check_print_format",
       "status": "fail"
@@ -51,5 +51,5 @@
   "commit": "eb9e37c7c5416d05460bf7206e70fcb75e5586c4",
   "failed": 4,
   "passed": 0,
-  "timestamp": "2026-05-09T06:00:33Z"
+  "timestamp": "2026-05-09T07:57:08Z"
 }
