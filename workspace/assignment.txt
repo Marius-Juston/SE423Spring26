@@ -1,0 +1,21 @@
+# SE 423 autograder manifest
+#
+# One line per assignment you have started, in the form:
+#
+#   <ASSIGNMENT_ID> <folder under workspace/> [<main file>]
+#
+# Examples:
+#   HW1 HW1mj
+#   HW2 HW2mj
+#   HW3 HW3
+#   Lab5 Lab5
+#
+# - ASSIGNMENT_ID must be one of HW1..HW6, Lab1..Lab6, Lab7-1, Lab7-2.
+# - The folder is interpreted relative to workspace/.
+# - The optional 3rd column is only needed if the folder contains more than
+#   one *_main.c file (otherwise the autograder picks it automatically).
+#
+# Lines starting with '#' and blank lines are ignored. Each push grades the
+# subset of assignments whose folders changed; results land in autograder/.
+#
+# Add lines below as you start each assignment:
