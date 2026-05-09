@@ -1,106 +1,29 @@
 {
   "assignment": "HW1",
-  "checks": [
+  "commit": "33c43cf487df6548291f45f227063ef833243563",
+  "failed": 8,
+  "folders": [
+    "HW1mj",
+    "HW2mj_copy"
+  ],
+  "passed": 6,
+  "runs": [
     {
-      "messages": [
-        "[2026-05-09 17:25:41.709] [info] Check initialization\n",
-        "[2026-05-09 17:25:41.712] [warning] GpioSetup[22] Mux Channel Selection expected to be 0 but was 5\n",
-        "[2026-05-09 17:25:41.712] [warning] GpioDataRegs GPIO A Data Clear Register (GPIO0 to 31) all expected to be 239075328 but was 234881024\n",
-        "[2026-05-09 17:25:41.712] [warning] GpioDataRegs GPIO A Data Clear Register (GPIO0 to 31) bit 22 Output Clear bit for this pin expected to be 1 but was 0\n",
-        "[2026-05-09 17:25:41.713] [warning] GpioCtrlRegs GPIO A Pull Up Disable Register (GPIO0 to 31) all is non-zero\n",
-        "[2026-05-09 17:25:41.713] [warning] GpioCtrlRegs GPIO A Pull Up Disable Register (GPIO0 to 31) bit 22 Pull-Up Disable control for this pin is non-zero\n",
-        "[2026-05-09 17:25:41.713] [warning] EPwm12Regs Time Base Control Register all is non-zero\n",
-        "[2026-05-09 17:25:41.713] [warning] EPwm12Regs Time Base Control Register bit 15:14 Emulation Mode Bits is non-zero\n",
-        "[2026-05-09 17:25:41.713] [warning] EPwm12Regs Action Qualifier Control Register For Output A all is non-zero\n",
-        "[2026-05-09 17:25:41.713] [warning] EPwm12Regs Action Qualifier Control Register For Output A bit 1:0 Action Counter = Zero is non-zero\n",
-        "[2026-05-09 17:25:41.713] [warning] EPwm12Regs Action Qualifier Control Register For Output A bit 5:4 Action Counter = Compare A Up is non-zero\n",
-        "[2026-05-09 17:25:41.713] [warning] EPwm12Regs Time Base Period Register is non-zero\n",
-        "[2026-05-09 17:25:41.713] [warning] EPwm12Regs Counter Compare A Register all is non-zero\n",
-        "[2026-05-09 17:25:41.713] [warning] EPwm12Regs Counter Compare A Register bit 31:16 Compare A Register is non-zero\n",
-        "[2026-05-09 17:25:41.714] [warning] CpuTimer2 PeriodInUSec expected to be 5000 but was 40000\n",
-        "[2026-05-09 17:25:41.715] [warning] GpioSetup[22] Mux Channel Selection expected to be 0 but was 5\n",
-        "[2026-05-09 17:25:41.715] [warning] GpioDataRegs GPIO A Data Clear Register (GPIO0 to 31) all expected to be 239075328 but was 234881024\n",
-        "[2026-05-09 17:25:41.715] [warning] GpioDataRegs GPIO A Data Clear Register (GPIO0 to 31) bit 22 Output Clear bit for this pin expected to be 1 but was 0\n",
-        "[2026-05-09 17:25:41.715] [warning] GpioCtrlRegs GPIO A Pull Up Disable Register (GPIO0 to 31) all is non-zero\n",
-        "[2026-05-09 17:25:41.715] [warning] GpioCtrlRegs GPIO A Pull Up Disable Register (GPIO0 to 31) bit 22 Pull-Up Disable control for this pin is non-zero\n",
-        "[2026-05-09 17:25:41.716] [warning] EPwm12Regs Time Base Control Register all is non-zero\n",
-        "[2026-05-09 17:25:41.716] [warning] EPwm12Regs Time Base Control Register bit 15:14 Emulation Mode Bits is non-zero\n",
-        "[2026-05-09 17:25:41.716] [warning] EPwm12Regs Action Qualifier Control Register For Output A all is non-zero\n",
-        "[2026-05-09 17:25:41.716] [warning] EPwm12Regs Action Qualifier Control Register For Output A bit 1:0 Action Counter = Zero is non-zero\n",
-        "[2026-05-09 17:25:41.716] [warning] EPwm12Regs Action Qualifier Control Register For Output A bit 5:4 Action Counter = Compare A Up is non-zero\n",
-        "[2026-05-09 17:25:41.716] [warning] EPwm12Regs Time Base Period Register is non-zero\n",
-        "[2026-05-09 17:25:41.716] [warning] EPwm12Regs Counter Compare A Register all is non-zero\n",
-        "[2026-05-09 17:25:41.716] [warning] EPwm12Regs Counter Compare A Register bit 31:16 Compare A Register is non-zero\n",
-        "[2026-05-09 17:25:41.717] [warning] CpuTimer2 PeriodInUSec expected to be 5000 but was 40000\n"
-      ],
-      "name": "check_initialization",
-      "status": "fail"
+      "commit": "33c43cf487df6548291f45f227063ef833243563",
+      "failed": 3,
+      "folder": "HW1mj",
+      "passed": 4,
+      "slot": "HW1__HW1mj",
+      "timestamp": "2026-05-09T17:43:17Z"
     },
     {
-      "messages": [
-        "[2026-05-09 17:25:41.718] [info] Check timer 0\n"
-      ],
-      "name": "check_timer0",
-      "status": "pass"
-    },
-    {
-      "messages": [
-        "[2026-05-09 17:25:41.718] [info] Check timer 1\n"
-      ],
-      "name": "check_timer1",
-      "status": "pass"
-    },
-    {
-      "messages": [
-        "[2026-05-09 17:25:41.718] [info] Check timer 2 (spec-strict)\n",
-        "[2026-05-09 17:25:41.718] [error] [check_timer2] released-buttons: GPIO27 (LED10) toggle bit not set at 100 ms boundary\n",
-        "[2026-05-09 17:25:41.718] [error]   spec: every 100 ms boundary must toggle LED10 (GPIO27)\n",
-        "[2026-05-09 17:25:41.718] [error] [check_timer2] released-buttons: GPIO60 (LED11) toggle bit not set at 100 ms boundary\n",
-        "[2026-05-09 17:25:41.718] [error]   spec: every 100 ms boundary must toggle LED11 (GPIO60)\n",
-        "[2026-05-09 17:25:41.718] [error] [check_timer2] PB1-pressed: GPIO61 (LED12) toggle bit not set\n",
-        "[2026-05-09 17:25:41.718] [error]   spec: spec Ex.9: 'If PB1 (GPIO4) pressed (DAT==0), toggle LED12 (GPIO61)'\n",
-        "[2026-05-09 17:25:41.718] [error] [check_timer2] PB1-pressed: GPIO157 (LED13) toggle bit not set\n",
-        "[2026-05-09 17:25:41.718] [error]   spec: spec Ex.9: '...toggle LED13 (GPIO157)'\n",
-        "[2026-05-09 17:25:41.718] [error] [check_timer2] PB4-pressed: GPIO158 (LED14) toggle bit not set\n",
-        "[2026-05-09 17:25:41.718] [error]   spec: spec Ex.9: 'If PB4 (GPIO7) pressed, toggle LED14 (GPIO158)'\n",
-        "[2026-05-09 17:25:41.718] [error] [check_timer2] PB4-pressed: GPIO159 (LED15) toggle bit not set\n",
-        "[2026-05-09 17:25:41.718] [error]   spec: spec Ex.9: '...toggle LED15 (GPIO159)'\n"
-      ],
-      "name": "check_timer2",
-      "status": "fail"
-    },
-    {
-      "messages": [
-        "[2026-05-09 17:25:41.718] [info] Check saturate\n",
-        "[2026-05-09 17:25:41.718] [error] float saturate(float, float) not available\n"
-      ],
-      "name": "check_saturate",
-      "status": "fail"
-    },
-    {
-      "messages": [
-        "[2026-05-09 17:25:41.718] [info] Check print cadence\n",
-        "[2026-05-09 17:25:41.718] [error] [check_print_cadence] expected ~4 prints on SCIA (tolerance \u00b110% \u2192 window [3, 5]), got 0\n",
-        "[2026-05-09 17:25:41.718] [error]   hint: zero printf calls were captured. Common causes:\n",
-        "[2026-05-09 17:25:41.718] [error]         - the SCI driver wasn't initialised (init_serialSCIA / serial_printf gated)\n",
-        "[2026-05-09 17:25:41.718] [error]         - UARTPrint == 1 is never set inside cpu_timer2_isr\n",
-        "[2026-05-09 17:25:41.718] [error]         - the print is gated by 'if (CpuTimer2.InterruptCount % N == 0)' but InterruptCount never reaches a multiple of N during the test window\n",
-        "[2026-05-09 17:25:41.718] [error]   spec Ex.5: serial_printf must fire every 250 ms \u2014 that's 4 prints in 1 s\n"
-      ],
-      "name": "check_print_cadence",
-      "status": "fail"
-    },
-    {
-      "messages": [
-        "[2026-05-09 17:25:41.718] [info] Check print format\n",
-        "[2026-05-09 17:25:41.718] [error] [check_print_format] no SCIA prints captured \u2014 main thread may not be servicing UARTPrint\n"
-      ],
-      "name": "check_print_format",
-      "status": "fail"
+      "commit": "33c43cf487df6548291f45f227063ef833243563",
+      "failed": 5,
+      "folder": "HW1mj",
+      "passed": 2,
+      "slot": "HW1__HW2mj_copy",
+      "timestamp": "2026-05-09T17:43:17Z"
     }
   ],
-  "commit": "33c43cf487df6548291f45f227063ef833243563",
-  "failed": 5,
-  "passed": 2,
-  "timestamp": "2026-05-09T17:25:55Z"
+  "timestamp": "2026-05-09T17:43:17Z"
 }
